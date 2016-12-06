@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="#fff0f0f2"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/stare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <!--<SurfaceView-->
+        <!--android:id="@+id/sf"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent" />-->
+
+    <!--<VideoView-->
+        <!--android:id="@+id/auto_videoview"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/auto_medial_viewPage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <!--<TextView-->
+        <!--android:id="@+id/step_tv"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+    <!--<LinearLayout-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent">-->
+        <!--<ImageView-->
+            <!--android:id="@+id/whorl_view"-->
+            <!--android:layout_weight="sf1"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:background="#ffe6ebed"-->
+            <!--android:layout_height="match_parent" />-->
+    <!--</LinearLayout>-->
+    <!--<com.mazing.com.cavasdemo.refresh.RefreshView-->
+        <!--android:id="@+id/reView"-->
+        <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+        <!--app:AniBackColor="#ff0097cd"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <!--<android.support.v7.widget.RecyclerView-->
+            <!--android:id="@+id/re_rv"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent" />-->
+        <!--&lt;!&ndash;&lt;!&ndash;<ListView&ndash;&gt;&ndash;&gt;-->
+            <!--&lt;!&ndash;android:background="#ffffffff"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/list"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="match_parent"></ListView>&ndash;&gt;-->
+    <!--</com.mazing.com.cavasdemo.refresh.RefreshView>-->
+
+    <!--<Button-->
+        <!--android:id="@+id/btn_stop"-->
+        <!--android:text="stop"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <!--<com.mazing.com.cavasdemo.view.WaveView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="200dp" />-->
+    
+    <!--<com.mazing.com.cavasdemo.view.BezierView-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="350dp" />-->
+
+    <!--<com.mazing.com.cavasdemo.view.PorterDuffXfermodeViewV2-->
+        <!--android:id="@+id/wave_view"-->
+        <!--android:layout_width="173dp"-->
+        <!--android:layout_height="173dp"-->
+        <!--android:layout_gravity="center_horizontal" />-->
+
+    <!--<com.mazing.com.cavasdemo.view.MoveCircle-->
+        <!--android:id="@+id/circle3"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="200dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--/>-->
+
+
+</RelativeLayout>
