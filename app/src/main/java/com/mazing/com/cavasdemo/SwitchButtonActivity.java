@@ -3,6 +3,7 @@ package com.mazing.com.cavasdemo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 
 import com.mazing.com.cavasdemo.view.SwitchButton;
 
@@ -19,6 +20,7 @@ public class SwitchButtonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_switch_button);
 
         SwitchButton swBtn = (SwitchButton) findViewById(R.id.sw_btn);
+        swBtn.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         swBtn.setStatus(false);
         swBtn.setToggleViewClickListener(new SwitchButton.OnToggleViewClickListener() {
             @Override

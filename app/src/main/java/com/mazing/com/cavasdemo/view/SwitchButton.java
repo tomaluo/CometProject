@@ -215,6 +215,7 @@ public class SwitchButton extends View {
     private void drawCircle(Canvas canvas){
         mCircleWhitePaint.setColor(CIRCLECLOOR);
         mCircleWhitePadPaint.setColor(LINECOLOR);
+        mCircleWhitePadPaint.setShadowLayer(mStrokeWidth, 0f, mStrokeWidth, 0x7F000000);
         if(!mIsOn){
             canvas.drawCircle(mCirclePointX , mHeight / 2, mRation, mCircleWhitePaint);
             canvas.drawCircle(mCirclePointX, mHeight / 2, mRation, mCircleWhitePadPaint);
