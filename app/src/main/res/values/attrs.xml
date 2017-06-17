@@ -10,4 +10,13 @@
         <attr name="captchaHeight" format="dimension"/>
         <attr name="matchDeviation" format="dimension"/>
     </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="SwitchWidth" format="dimension"/>
+        <attr name="SwitchHeight" format="dimension"/>
+        <attr name="CircleColor" format="color"/>
+        <attr name="LineColor" format="color"/>
+        <attr name="BGColor" format="color"/>
+        <attr name="ClickColor" format="color"/>
+    </declare-styleable>
 </resources>

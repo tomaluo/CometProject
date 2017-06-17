@@ -8,4 +8,6 @@
     <color name="eggplant">#663D4E</color>
     <color name="sienna">#EB6460</color>
     <color name="tab_background">#f6f4f2</color>
+
+    <color name="switch_button_line">#E5E5E5</color>
 </resources>
