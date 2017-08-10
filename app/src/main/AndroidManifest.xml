@@ -17,8 +17,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".OkHttpActivity"
+            android:name=".MainActivity"
             android:theme="@style/AppTheme"
+            android:hardwareAccelerated="false"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,6 +31,22 @@
         <activity
             android:name=".transition.SharedElementActivity"
             android:screenOrientation="portrait"/>
+
+        <!--<service  android:name=".service.MessengerService" android:enabled="true" android:exported="true">-->
+            <!--<intent-filter>-->
+                <!--<action android:name="com.lypeer.messenger"></action>-->
+                <!--<category android:name="android.intent.category.DEFAULT"/>-->
+            <!--</intent-filter>-->
+        <!--</service>-->
+
+        <service
+            android:name=".service.AIDLService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.lypeer.aidl"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>

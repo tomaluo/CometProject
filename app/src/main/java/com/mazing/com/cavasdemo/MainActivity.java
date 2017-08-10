@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initView();
+//        initView();
 //        Button btnstar = (Button)findViewById(R.id.stare);
 //        btnstar.setOnClickListener(this);
 
@@ -109,42 +109,42 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 //        });
 //
 //        // 获取SurfaceHolder实例
-        holder1 = sf1.getHolder();
-        holder2 = sf2.getHolder();
-        holder3 = sf3.getHolder();
+//        holder1 = sf1.getHolder();
+//        holder2 = sf2.getHolder();
+//        holder3 = sf3.getHolder();
+////
+////        // 实现接口
+//        holder1.addCallback(this);
+//        holder2.addCallback(this);
+//        holder3.addCallback(this);
 //
-//        // 实现接口
-        holder1.addCallback(this);
-        holder2.addCallback(this);
-        holder3.addCallback(this);
-
-        autoVp.setAdapter(new PagerAdapter() {
-            @Override
-            public int getCount() {
-                return viewcontaniers.size();
-            }
-
-            @Override
-            public Object instantiateItem(ViewGroup container, int position) {
-                View specView = viewcontaniers.get(position);
-                ViewGroup parent = (ViewGroup) specView.getParent();
-                if (parent != null) {
-                    parent.removeAllViews();
-                }
-                container.addView(specView);
-                return viewcontaniers.get(position);
-            }
-
-            @Override
-            public void destroyItem(ViewGroup container, int position, Object object) {
-                container.removeView(viewcontaniers.get(position));
-            }
-
-            @Override
-            public boolean isViewFromObject(View view, Object object) {
-                return view == object;
-            }
-        });
+//        autoVp.setAdapter(new PagerAdapter() {
+//            @Override
+//            public int getCount() {
+//                return viewcontaniers.size();
+//            }
+//
+//            @Override
+//            public Object instantiateItem(ViewGroup container, int position) {
+//                View specView = viewcontaniers.get(position);
+//                ViewGroup parent = (ViewGroup) specView.getParent();
+//                if (parent != null) {
+//                    parent.removeAllViews();
+//                }
+//                container.addView(specView);
+//                return viewcontaniers.get(position);
+//            }
+//
+//            @Override
+//            public void destroyItem(ViewGroup container, int position, Object object) {
+//                container.removeView(viewcontaniers.get(position));
+//            }
+//
+//            @Override
+//            public boolean isViewFromObject(View view, Object object) {
+//                return view == object;
+//            }
+//        });
 
 //        MoveCircle  circle3 = (MoveCircle)findViewById(R.id.circle3);
 //        circle3.startAnimation();

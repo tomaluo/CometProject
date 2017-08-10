@@ -10,8 +10,14 @@
 
     <Button
         android:id="@+id/stare"
+        android:visibility="gone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <com.mazing.com.cavasdemo.view.RemoteControlMenu
+        android:id="@+id/RemoteControlMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
     <!--<SurfaceView-->
         <!--android:id="@+id/sf"-->
