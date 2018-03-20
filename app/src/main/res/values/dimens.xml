@@ -8,4 +8,13 @@
     <dimen name="switch_button_ration">14dp</dimen>
     <dimen name="switch_button_stroke_width">0.5dp</dimen>
     <dimen name="switch_button_bg_ration">28dp</dimen>
+
+    <dimen name="horizontal_big_text">18sp</dimen>
+    <dimen name="horizontal_text">15sp</dimen>
+
+    <dimen name="sectioned_top">20dp</dimen>
+    <dimen name="sectioned_alignBottom">5dp</dimen>
+
+    <dimen name="switch_tab_height">45dp</dimen>
+    <dimen name="switch_tab_text_size">6dp</dimen>
 </resources>

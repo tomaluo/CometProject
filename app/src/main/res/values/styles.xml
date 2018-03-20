@@ -11,4 +11,18 @@
     <style name="ImageTranslucentTheme" parent="AppTheme">
         <!--在Android 4.4之前的版本上运行，直接跟随系统主题-->
     </style>
+
+    <style name="Translucent" parent="Theme.AppCompat.Light.NoActionBar">
+        //第一个activity的状态栏颜色为#0288D1
+        <item name="colorPrimaryDark">#0288D1</item>
+        //第二个activity的背景为透明，
+        //这样可以看得到第一个Activity的界面
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="TextLabel" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
+        <item name="colorControlActivated">#FFCC00</item>
+    </style>
 </resources>

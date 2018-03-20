@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!--<com.mazing.com.cavasdemo.SwitchTabGroupView-->
+        <!--android:id="@+id/switch_group"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:textSize="6sp"-->
+        <!--app:tabHeight="44dp"-->
+        <!--app:lineHeight="2dp"-->
+        <!--app:lineWidth="50dp"/>-->
+
+    <!--<TextView-->
+        <!--android:id="@+id/more_line_tv"-->
+        <!--android:ellipsize="end"-->
+        <!--android:maxLines="7"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content" />-->
+
+    <com.mazing.com.cavasdemo.view.MoreLineTextViewV2
+        android:id="@+id/more_tv"
+        android:background="@color/saffron"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

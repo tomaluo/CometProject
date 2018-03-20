@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/CavasDemo.iml" filepath="$PROJECT_DIR$/CavasDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CometProject.iml" filepath="$PROJECT_DIR$/CometProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

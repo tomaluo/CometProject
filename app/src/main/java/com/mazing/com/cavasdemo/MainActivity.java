@@ -1,6 +1,10 @@
 package com.mazing.com.cavasdemo;
 
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Rect;
 import android.hardware.Sensor;
 import android.hardware.SensorManager;
 import android.media.MediaPlayer;
@@ -11,6 +15,7 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.view.Display;
 import android.view.LayoutInflater;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -87,8 +92,8 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
         setContentView(R.layout.activity_main);
 
 //        initView();
-//        Button btnstar = (Button)findViewById(R.id.stare);
-//        btnstar.setOnClickListener(this);
+        Button btnstar = (Button)findViewById(R.id.stare);
+        btnstar.setOnClickListener(this);
 
 //        autoVV = (VideoView)findViewById(R.id.auto_videoview);
 //
@@ -317,8 +322,57 @@ public class MainActivity extends AppCompatActivity implements SurfaceHolder.Cal
 
     @Override
     public void onClick(View v) {
-        if(v.getId() == R.id.stare)
-            player.start();
+        if(v.getId() == R.id.stare){
+            getScreenCache();
+        }
+
+    }
+
+
+    public Bitmap getScreenCache() {
+        // 获取windows中最顶层的view
+        View view = this.getWindow().getDecorView();
+        view.buildDrawingCache();
+        // 获取状态栏高度
+        Rect rect = new Rect();
+        view.getWindowVisibleDisplayFrame(rect);
+        int statusBarHeights = rect.top;
+        Display display = this.getWindowManager().getDefaultDisplay();
+        // 获取屏幕宽和高
+        int widths = display.getWidth();
+        int heights = display.getHeight();
+        // 允许当前窗口保存缓存信息
+        view.setDrawingCacheEnabled(true);
+        // 去掉状态栏
+        int actionBarHeight = this.getSupportActionBar().getHeight();
+        Bitmap bmp = Bitmap.createBitmap(view.getDrawingCache(), 0,
+                statusBarHeights + actionBarHeight, widths, heights - statusBarHeights - actionBarHeight
+        );
+        // 销毁缓存信息
+        view.destroyDrawingCache();
+
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.bg_channel, null);
+        int height = bitmap.getHeight() * widths / bitmap.getWidth();
+        Bitmap bmpFoot = Bitmap.createScaledBitmap(bitmap, widths, height, false);
+
+        Bitmap shareBitmap = Bitmap.createBitmap(widths, heights - statusBarHeights - actionBarHeight + height,
+                Bitmap.Config.RGB_565);
+        Canvas canvas = new Canvas(shareBitmap);
+        canvas.drawBitmap(bmp, 0, 0, null);
+        canvas.drawBitmap(bmpFoot, 0, heights - statusBarHeights - actionBarHeight, null);
+
+        if (null != bitmap && !bitmap.isRecycled()) {
+            bitmap.recycle();
+            bitmap = null;
+        }
+
+        if (null != bmpFoot && !bmpFoot.isRecycled()) {
+            bmpFoot.recycle();
+            bmpFoot = null;
+        }
+//        System.out.println(shareBitmap.getByteCount() / 1024 + " kb");
+
+        return shareBitmap;
     }
 
     private class SampleAdapter extends RecyclerView.Adapter<SampleHolder> {

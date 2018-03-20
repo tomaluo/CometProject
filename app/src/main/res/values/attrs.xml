@@ -19,4 +19,14 @@
         <attr name="BGColor" format="color"/>
         <attr name="ClickColor" format="color"/>
     </declare-styleable>
+
+    <declare-styleable name="SwitchTabGroupBtn">
+        <attr name="unCheckedColor" format="reference|color" />
+        <attr name="checkedColor" format="reference|color" />
+        <attr name="isChecked" format="boolean" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="tabHeight" format="dimension" />
+        <attr name="textSize" format="dimension" />
+    </declare-styleable>
 </resources>
